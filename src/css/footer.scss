@@ -1,0 +1,52 @@
+@import "../abstracts/__colors";
+
+footer
+{
+    background: var(--primary-blue);
+    padding: 6rem 0;
+    border-top-right-radius: 110px;
+
+    .container
+    {
+        max-width: 70%;
+        margin: 0 auto;
+
+        .grid_footer
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+
+            img
+            {
+                margin-bottom: 4rem;
+            }
+
+            .footer1
+            {
+                h4
+                {
+                    color: #fff;
+                    margin-bottom: 2rem;
+                }
+
+                ul.ul_footer
+                {
+                    li
+                    {
+                        list-style: none;
+                        display: block;
+                        margin-bottom: 1rem;
+
+                        a
+                        {
+                            text-decoration: none;
+                            color: #a7a4a4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

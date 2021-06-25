@@ -1,0 +1,144 @@
+@import "../abstracts/__colors";
+
+section.state
+{
+    background: var(--primary-gray);
+    height: 100%;
+    padding: 4rem 0;
+
+    .container
+    {
+        background: var(--primary-blue);
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        height: 100%;
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 17%;
+
+        .circles_cut
+        {
+            img.circles
+            {
+                position: absolute;
+                top: 0;
+                left: -15%;
+                transform: rotate(180deg);
+                width: 69.5%;
+            }
+
+            img.circle2
+            {
+                display: none;
+            }
+        }
+
+        .grid_state
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            gap: 2rem;
+
+            img.phones
+            {
+                position: relative;
+                top: -12%;
+                width: 100%;
+            }
+
+            .state1
+            {
+                color: #fff;
+
+                h1
+                {
+                    font-size: 2.5rem;
+                    margin-bottom: 2rem;
+                }
+
+                p
+                {
+                    line-height: 25px;
+                    color: rgb(185, 176, 176);
+                }
+            }
+        }
+    }
+}
+
+@media(width < 1280px)
+{
+    section.state
+    {
+        .container
+        {
+            height: 100%;
+            padding: 8rem 17%;
+
+            .grid_state
+            {
+
+                .state1
+                {
+                    text-align: center;
+                }
+            }
+        }
+
+        img.phones
+        {
+            position: initial !important;
+            z-index: 9;
+        }
+    }
+}
+
+@media(width < 610px)
+{
+    section.state
+    {
+        position: relative;
+        padding-top: 8rem;
+        z-index: 999;
+
+        .container
+        {
+            padding: 0 17%;
+            
+            .grid_state
+            {
+                img.phones
+                {
+                    position: relative !important;
+                    top: -200px;
+                }
+
+                .state1
+                {
+                    position: relative;
+                    top: -175px;
+                    z-index: 5;
+                }
+            }
+        }
+
+        img.circles
+        {
+            display: none;
+        }
+
+        img.circle2
+        {
+            display: block !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}

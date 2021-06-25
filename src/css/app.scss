@@ -1,0 +1,29 @@
+@import "../abstracts/__colors";
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+
+        button
+        {
+            outline: none;
+            cursor: pointer;
+            font-size: .75rem;
+        }
+
+        button.white_bg
+        {
+            border: none;
+            background: #fff;
+            color: var(--primary-red);
+            font-weight: 700;
+        }
+    }
+}

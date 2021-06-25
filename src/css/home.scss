@@ -1,0 +1,344 @@
+@import "../abstracts/__colors";
+
+section.home
+{
+    background: var(--primary-orange);
+    position: relative;
+    padding-bottom: 8rem;
+    border-bottom-left-radius: 80px;
+
+    img.hamburger, img.logo, img.close
+    {
+        cursor: pointer;
+        display: none;
+    }
+
+    li
+    {
+        font-size: .9rem;
+    }
+
+    header
+    {
+        display: flex;
+        justify-content: space-between;
+        background: transparent;
+        height: 100px;
+        align-items: center;
+        padding: 0 10%;
+        width: 100%;
+
+        .left_
+        {
+            display: flex;
+            align-items: center;
+
+            nav
+            {
+                ul.first_nav
+                {
+                    li
+                    {
+                        list-style: none;
+                        display: inline-block;
+                        padding-left: 3rem;
+                        position: relative;
+
+                        a
+                        {
+                            text-decoration: none;
+                            color: #fff;
+
+                            ul.second_nav
+                            {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    li:after
+                    {
+                        content: "▼";
+                        margin-left: .35rem;
+                        font-size: .75rem;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+
+                    li.connect:hover
+                    {         
+                        ul.second_nav
+                        {
+                            display: block;
+                            position: absolute;
+                            left: 0;
+
+                            li.nested
+                            {
+                                display: block;
+                            }
+
+                            li.nested::after
+                            {
+                                content: "";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right_
+        {
+            display: flex;
+            align-items: center;
+
+            li
+            {
+                list-style: none;
+                margin-right: 1.5rem;
+                
+                a
+                {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+
+            button
+            {
+                padding: .75rem 2rem;
+                border-radius: 30px;
+                transition: .5s ease-in-out;
+
+                &:hover
+                {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+
+    .wrapper
+    {
+        max-width: 90%;
+        margin: 0 auto;
+        
+        h1, p
+        {
+            text-align: center;
+            color: #fff;
+        }
+
+        h1
+        {
+            font-size: 3rem;
+            font-weight: 500;
+            margin-top: 3.5rem;
+        }
+
+        p
+        {
+            font-size: .9rem;
+        }
+
+        .buttons
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2.5rem;
+
+            button.white_bg
+            {   
+                margin-right: .75rem;
+                padding: .6rem .75rem;
+                border-radius: 30px;
+            } 
+            
+            button.transparent_bg
+            {
+                background: transparent;
+                outline: none;
+                border: 1px solid #fff;
+                padding: .6rem 1rem;
+                border-radius: 30px;
+                color: #fff;
+                font-size: .8rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media(width < 825px)
+{
+    section.home
+    {
+        position: relative; 
+
+        h1
+        {
+            font-size: 2rem !important;
+            margin-bottom: 1.5rem;
+        }
+
+        header
+        {
+            .left_, .right_
+            {
+                display: none;
+            }
+
+            img.logo, img.hamburger
+            {
+                display: block;
+            }
+        }
+
+        header.show
+        {
+            background: var(--primary-orange);
+            position: absolute;
+            display: block;
+            height: 80vh;
+            width: 100%;
+            top: -55px;
+            z-index: 9;
+            border-bottom-left-radius: 80px;
+
+            div
+            {
+                max-width: 90%;
+                margin: 0 auto;
+                background: #fff;
+                position: relative;
+                top: 10%;
+            }
+
+            .left_
+            {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            .right_
+            {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+
+            .left_
+            {
+                height: 50vh;
+            }
+
+            .left_, .right_
+            {
+                display: block;
+
+                img
+                {
+                    display: none;
+                }
+
+                li
+                {
+                    display: block !important;
+                    text-align: center;
+                    margin: 0 0 2rem 0 !important;
+                    padding: 0 !important;
+                    font-weight: 600;
+
+                    a
+                    {
+                        color: var(--secondary-blue) !important;
+                        font-size: 1.25rem;
+                    }
+                }
+
+                li.connect
+                {
+                    position: relative;
+                }
+
+                li.connect:hover
+                {
+                    ul.second_nav
+                    {
+                        width: 85%;
+                        margin: 2rem auto !important;
+                        padding: 2rem 0 .5rem 0;
+                        height: 100%;
+                        background: var(--primary-gray);
+                        position: initial !important;
+                        border-radius: 10px;
+                        text-align: center !important;
+                    }
+                }
+
+                li.product
+                {
+                   padding-top: 2rem !important;
+                }
+            }
+
+            .right_
+            {
+                /* position: relative;
+                padding-bottom: 2rem;
+
+                li, button
+                {
+                    position: absolute;
+                    bottom: 0;
+                    left: 40%;
+                } */
+
+                padding-top: 2rem;
+                height: 20vh;
+                border-top: 2px solid var(--primary-gray);
+                padding: 2 2rem;
+
+                li
+                {
+                    a
+                    {
+                        color: var(--secondary-blue) !important;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                    }
+                }
+                
+                button
+                {
+                    display: block;
+                    margin: 0 auto;
+                    //padding: 0 !important;
+                    background: linear-gradient(90deg, rgba(255,133,110,1) 0%, rgba(255,69,88,1) 38%);;
+                    color: #fff;
+                    font-size: 1rem;
+                }
+            }
+            
+            img.close
+            {
+                display: block;
+                float: right;
+                position: relative;
+                top: 0px;
+            }
+
+            img.logo
+            {
+                position: relative;
+                top: 40px;
+            }
+
+            img.hamburger
+            {
+                display: none;
+            }
+        }
+    }
+}
