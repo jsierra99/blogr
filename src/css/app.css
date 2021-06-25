@@ -1,0 +1,33 @@
+:root {
+  --primary-red: #ff3e55;
+  --primary-orange: #ff8f71;
+  --primary-gray: #FAFAFA;
+  --primary-blue: #2F3044;
+  --secondary-blue: #243e53;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+* body button {
+  outline: none;
+  cursor: pointer;
+  font-size: .75rem;
+}
+
+* body button.white_bg {
+  border: none;
+  background: #fff;
+  color: var(--primary-red);
+  font-weight: 700;
+}
+/*# sourceMappingURL=app.css.map */

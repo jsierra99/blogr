@@ -1,0 +1,48 @@
+:root {
+  --primary-red: #ff3e55;
+  --primary-orange: #ff8f71;
+  --primary-gray: #FAFAFA;
+  --primary-blue: #2F3044;
+  --secondary-blue: #243e53;
+}
+
+footer {
+  background: var(--primary-blue);
+  padding: 6rem 0;
+  border-top-right-radius: 110px;
+}
+
+footer .container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+footer .container .grid_footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+footer .container .grid_footer img {
+  margin-bottom: 4rem;
+}
+
+footer .container .grid_footer .footer1 h4 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+footer .container .grid_footer .footer1 ul.ul_footer li {
+  list-style: none;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+footer .container .grid_footer .footer1 ul.ul_footer li a {
+  text-decoration: none;
+  color: #a7a4a4;
+}
+/*# sourceMappingURL=footer.css.map */
